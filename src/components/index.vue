@@ -4,8 +4,8 @@
       <!-- slides -->
       <swiper-slide>
         <div class="scroll-container">
-          <img class="auto-img" src="/static/30year.jpg" alt>
-          <img class="auto-img" src="/static/30year.jpg" alt>
+          <img class="auto-img" :src="img" alt>
+          <img class="auto-img" :src="img" alt>
           <vueToTop :container="'.scroll-container'"></vueToTop>
           <movement :container="'.scroll-container'"/>
         </div>
@@ -40,7 +40,8 @@ export default {
         onlyExternal: true,
         allowSwipeToNext: false,
         allowSwipeToPre: false
-      }
+      },
+      img: require("../../static/30year.jpg")
     };
   },
   computed: {
